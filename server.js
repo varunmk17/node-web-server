@@ -52,4 +52,6 @@ app.get('/bad', (req, res) => {
     });
 });
 
-app.listen(PORT);
+app.listen(PORT, () => {
+    console.log(`Server running at ${PORT}`);
+});
