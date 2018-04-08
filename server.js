@@ -46,6 +46,19 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Portfolio',
+        projects: [{
+            name: 'Project 1',
+            domain: 'Health Care'
+        }, {
+            name: 'Project 2',
+            domain: 'Manufacturing'
+        }]
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.status(404).send({
         errormsg: 'Oops.. Something went bad.'
